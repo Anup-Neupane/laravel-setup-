@@ -5,15 +5,15 @@ systemctl enable nginx
 systemctl start nginx
 apt-add-repository ppa:ondrej/php -y
 
-apt install -y php7.4 php7.4-{cli,gd,curl,mysql,ldap,zip,fileinfo,fpm,xml,mbstring,exif,pspell,imagick,bcmath}
-systemctl enable php7.4-fpm
-systemclt start php7.4-fpm
+sudo apt install -y php7.2 php7.2-{cli,gd,curl,mysql,ldap,zip,fileinfo,fpm,xml,mbstring,exif,pspell,imagick,bcmath}
+sudo systemctl enable php7.2-fpm
+sudo systemclt start php7.2-fpm
 apt install mariadb-server mariadb-client
 systemctl enable mariadb
 systemctl start mariadb
 mysql_secure_installation
-wget -O composer-setup.php https://getcomposer.org/installer
-php composer-setup.php --install-dir=/usr/bin --filename=composer
+sudo wget -O composer-setup.php https://getcomposer.org/installer
+sudo php composer-setup.php --install-dir=/usr/bin --filename=composer
 cd /var/www/html
 composer create-project laravel/laravel .
 chown www-data:www-data /var/www/html -R
