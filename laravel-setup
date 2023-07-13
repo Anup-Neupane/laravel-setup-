@@ -3,11 +3,11 @@ apt-get upgrade
 apt install -y nginx
 systemctl enable nginx
 systemctl start nginx
-apt-add-repository ppa:ondrej/php -y
+sudo apt-add-repository ppa:ondrej/php -y
 
-sudo apt install -y php7.2 php7.2-{cli,gd,curl,mysql,ldap,zip,fileinfo,fpm,xml,mbstring,exif,pspell,imagick,bcmath}
-sudo systemctl enable php7.2-fpm
-sudo systemclt start php7.2-fpm
+sudo apt install -y php8.1 php8.1-{cli,gd,curl,mysql,ldap,zip,fileinfo,fpm,xml,mbstring,exif,pspell,imagick,bcmath}
+sudo systemctl enable php8.1-fpm
+sudo systemctl start php8.1-fpm
 apt install mariadb-server mariadb-client
 systemctl enable mariadb
 systemctl start mariadb
